@@ -10,6 +10,9 @@
  * 
  *  2018/03/27 Porting nodes to nodelets
  ***********************************************************************/
+#ifndef OUTLIERS_REMOVER_CLASS_H_
+#define OUTLIERS_REMOVER_CLASS_H_
+
 #include <iostream>
 
 // ROS
@@ -33,6 +36,8 @@ class Outliers_Remover
 {
     public:
         Outliers_Remover(ros::NodeHandle& nh, ros::NodeHandle& nh_local):
+        nh_(nh),
+        nh_local_(nh_local),
         scene_cloud(new PCT),
         downsample_cloud(new PCT),
         remove_outlier_cloud(new PCT)
@@ -53,6 +58,7 @@ class Outliers_Remover
         
         //ROS
         ros::NodeHandle nh_;
+        ros::NodeHandle nh_local_;
         ros::Subscriber cloud_sub;
         ros::Publisher cloud_pub;
         sensor_msgs::PointCloud2 downsample_cloud_msg;
@@ -63,3 +69,4 @@ class Outliers_Remover
         PCT::Ptr remove_outlier_cloud;
 };
 }
+#endif

@@ -1,0 +1,9 @@
+<library path="lib/libobstacle_detector_nodelet">
+  <class name="obstacle_detector/Outliers_Remover" 
+         type="obstacle_detector::OutliersRemoverNodeletClass" 
+         base_class_type="nodelet::Nodelet">
+  <description>
+  Outlier Remover nodelet.
+  </description>
+  </class>
+</library>

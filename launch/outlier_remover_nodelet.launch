@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="nodelet" type="nodelet" name="obstacle_detector_nodelet"  args="manager" output="screen"/>
+
+  <node pkg="nodelet" type="nodelet" name="Outliers_Remover" args="load obstacle_detector/Outliers_Remover obstacle_detector_nodelet" output="screen">
+  </node>
+</launch>

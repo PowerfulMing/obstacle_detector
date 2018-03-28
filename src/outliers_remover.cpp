@@ -33,7 +33,7 @@ int main(int argc, char** argv)
   ros::init (argc, argv, "Outliers_Remover_node");
   ros::NodeHandle nh;
   ros::NodeHandle nh_local("~");
-  Outliers_Remover outliers_remover(nh, nh_local);
+  Outliers_Remover outliers_remover(nh,nh_local);
   //ros::Publisher pub = nh.advertise<PointCloud> ("points2", 1);
 
   // PointCloud::Ptr msg (new PointCloud);
